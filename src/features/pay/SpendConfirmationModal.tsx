@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import type { RootState } from 'src/app/rootReducer'
 import ChimoneyIcon from 'src/components/icons/logos/chimoney_logo.svg'
@@ -42,6 +43,13 @@ const SpendApp = () => {
   }
   const urlParams = new URLSearchParams(options).toString()
   const url = `${baseURL}?${urlParams}`
+
+  useEffect(() => {
+    if (typeof window !== 'undefined' && txid) {
+      window.location.assign(url)
+    }
+  }, [])
+
   return (
     <iframe
       src={url}
