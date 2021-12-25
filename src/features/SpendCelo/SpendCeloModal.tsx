@@ -9,6 +9,7 @@ export function useSpendCeloModal() {
       head: 'Spend Celo (Beta)',
       content: <SpendModal />,
       headIcon: <Icon />,
+      size: 'l',
     })
   }
 }
@@ -55,7 +56,7 @@ const style: Stylesheet = {
   spendEmbed: {
     width: '1280px',
     maxWidth: '100%',
-    height: '60vh',
+    height: '65vh',
     maxheight: '100%',
   },
 }
