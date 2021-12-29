@@ -46,7 +46,7 @@ const SpendApp = () => {
 
   useEffect(() => {
     if (typeof window !== 'undefined' && txid) {
-      window.location.assign(url)
+      window.open(url, '_blank')
     }
   }, [])
 
